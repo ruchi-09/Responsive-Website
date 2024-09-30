@@ -1,0 +1,107 @@
+.testimonials {
+    margin: 80px auto;
+    padding: 0 80px;
+    position: relative; /* Ensure this is relative to position next and back buttons */
+}
+
+.next-btn, .back-btn {
+    position: absolute;
+    top: 50%; /* Aligns both buttons vertically at the middle */
+    transform: translateY(-50%);
+    padding: 15px;
+    width: 50px;
+    height:50px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgb(123, 140, 199);
+    z-index: 1; /* Ensure buttons appear above the content */
+}
+
+.next-btn {
+    right: 0; /* This places the next button on the right side */
+}
+
+.back-btn {
+    left: 0; /* This places the back button on the left side */
+}
+
+.next-btn img, .back-btn img {
+    height: 30px;
+    width: 30px;
+}
+
+.slider {
+    overflow: hidden;
+    position: relative; /* Ensure the slider is positioned properly */
+}
+
+.slider ul {
+    display: flex;
+    width: 400%;
+    transition: 0.5s;
+    
+}
+
+.slider ul li {
+    list-style: none;
+    width: 25%;
+    padding: 20px;
+}
+
+.slide {
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    border-radius: 10px;
+    line-height: 1.4;
+    color: gray;
+}
+
+.slide img {
+    width: 65px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 4px solid red;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.user-info h3 {
+    color: brown;
+}
+
+@media (max-width:800px){
+    .testimonials ul li{
+        padding:10px;
+    }
+
+    .slide{
+        padding:10px;
+    }
+
+    .slide img{
+        width:50px;
+        border:3px solid black;
+    }
+}
+
+
+@media (max-width:600px){
+    .user-info{
+        display: block;
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+
+    .user-info h3{
+        font-size: 16px;
+    }
+
+    .slider p{
+        font-size: 12px;
+    }
+}
